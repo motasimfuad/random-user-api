@@ -1,9 +1,21 @@
+const fs = require("fs");
+
 function getRandomUser(req, res) {
   res.send("random user");
 }
 
 function getAllUsers(req, res) {
-  res.send("all users");
+  fs.readFile("./users.json", (err, data) => {
+    if (err) {
+      console.log(err);
+      res.status(400).send("Something went wrong");
+    } else {
+      res.json({
+        status: "success",
+        data: JSON.parse(data),
+      });
+    }
+  });
 }
 
 function saveNewUser(req, res) {
