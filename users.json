@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "Id": "001",
+      "gender": "male",
+      "name": "John Smith",
+      "contact": "john.smith@example.com",
+      "address": "123 Main Street, Anytown, USA",
+      "photoUrl": "https://example.com/photos/john_smith.jpg"
+    },
+    {
+      "Id": "002",
+      "gender": "female",
+      "name": "Jane Doe",
+      "contact": "jane.doe@example.com",
+      "address": "456 Oak Avenue, Another Town, USA",
+      "photoUrl": "https://example.com/photos/jane_doe.jpg"
+    },
+    {
+      "Id": "003",
+      "gender": "male",
+      "name": "Bob Johnson",
+      "contact": "bob.johnson@example.com",
+      "address": "789 Elm Street, Yet Another Town, USA",
+      "photoUrl": "https://example.com/photos/bob_johnson.jpg"
+    },
+    {
+      "Id": "004",
+      "gender": "female",
+      "name": "Sara Lee",
+      "contact": "sara.lee@example.com",
+      "address": "321 Pine Road, Anytown, USA",
+      "photoUrl": "https://example.com/photos/sara_lee.jpg"
+    },
+    {
+      "Id": "005",
+      "gender": "male",
+      "name": "David Brown",
+      "contact": "david.brown@example.com",
+      "address": "654 Cedar Lane, Another Town, USA",
+      "photoUrl": "https://example.com/photos/david_brown.jpg"
+    },
+    {
+      "Id": "006",
+      "gender": "female",
+      "name": "Mary Smith",
+      "contact": "mary.smith@example.com",
+      "address": "987 Maple Street, Anytown, USA",
+      "photoUrl": "https://example.com/photos/mary_smith.jpg"
+    },
+    {
+      "Id": "007",
+      "gender": "male",
+      "name": "Mike Johnson",
+      "contact": "mike.johnson@example.com",
+      "address": "369 Oak Avenue, Yet Another Town, USA",
+      "photoUrl": "https://example.com/photos/mike_johnson.jpg"
+    },
+    {
+      "Id": "008",
+      "gender": "female",
+      "name": "Emily Davis",
+      "contact": "emily.davis@example.com",
+      "address": "258 Cedar Lane, Anytown, USA",
+      "photoUrl": "https://example.com/photos/emily_davis.jpg"
+    },
+    {
+      "Id": "009",
+      "gender": "male",
+      "name": "Tom Smith",
+      "contact": "tom.smith@example.com",
+      "address": "147 Pine Road, Another Town, USA",
+      "photoUrl": "https://example.com/photos/tom_smith.jpg"
+    },
+    {
+      "Id": "010",
+      "gender": "female",
+      "name": "Olivia Brown",
+      "contact": "olivia.brown@example.com",
+      "address": "369 Elm Street, Anytown, USA",
+      "photoUrl": "https://example.com/photos/olivia_brown.jpg"
+    }
+  ]
+}
