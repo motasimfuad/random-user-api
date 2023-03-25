@@ -1,0 +1,23 @@
+{
+  "name": "random_user_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/motasimfuad/random-user-api.git"
+  },
+  "author": "motasimfuad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/motasimfuad/random-user-api/issues"
+  },
+  "homepage": "https://github.com/motasimfuad/random-user-api#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22"
+  }
+}
