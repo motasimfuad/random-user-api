@@ -43,7 +43,25 @@ function bulkUpdateUsers(req, res) {
 }
 
 function deleteUser(req, res) {
-  res.send("user deleted");
+  const { id } = req.params;
+  console.log(id);
+  fs.readFile("./users.json", (err, data) => {
+    if (err) {
+      console.log(err);
+      res.status(400).send("Something went wrong");
+    } else {
+      const users = JSON.parse(data);
+      const filteredUsers = users.filter((user) => user.id !== id);
+      fs.writeFile("./users.json", JSON.stringify(filteredUsers), (err) => {
+        if (err) {
+          console.log(err);
+          res.status(400).send("Something went wrong");
+        } else {
+          res.send("User deleted successfully!");
+        }
+      });
+    }
+  });
 }
 
 module.exports = {

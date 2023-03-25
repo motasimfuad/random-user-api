@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const port = 8000;
 const userRoutes = require("./routes/user.routes");
+const fs = require("fs");
 
 app.use("/user", userRoutes);
 

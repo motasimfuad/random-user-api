@@ -8,6 +8,14 @@
     "photoUrl": "https://robohash.org/johnsmith.png?set=set4"
   },
   {
+    "id": "2",
+    "gender": "female",
+    "name": "Jane Doe",
+    "contact": "+1 (555) 234-5678",
+    "address": "456 Elm St, Anytown USA",
+    "photoUrl": "https://robohash.org/janedoe.png?set=set4"
+  },
+  {
     "id": "3",
     "gender": "male",
     "name": "Tom Johnson",
