@@ -31,7 +31,42 @@ function getAllUsers(req, res) {
 }
 
 function saveNewUser(req, res) {
-  res.send("user saved");
+  const allFields = ["id", "gender", "name", "contact", "address", "photoUrl"];
+  const body = req.body;
+  const hasALlFields = allFields.every((field) =>
+    Object.keys(body).includes(field)
+  );
+  if (!hasALlFields) {
+    const missingProperties = allFields.filter(
+      (field) => !Object.keys(body).includes(field)
+    );
+    res.status(400).send(`[${missingProperties}] fields are required!`);
+    return;
+  }
+  fs.readFile("./users.json", (err, data) => {
+    if (err) {
+      console.log(err);
+      res.status(400).send("Something went wrong");
+    } else {
+      const users = JSON.parse(data);
+      if (users.some((user) => user.id === body.id)) {
+        res.status(400).send("User already exists");
+        return;
+      }
+      users.push(body);
+      fs.writeFile("./users.json", JSON.stringify(users), (err) => {
+        if (err) {
+          console.log(err);
+          res.status(400).send("Something went wrong");
+        } else {
+          res.json({
+            status: "success",
+            data: body,
+          });
+        }
+      });
+    }
+  });
 }
 
 function updateUser(req, res) {

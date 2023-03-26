@@ -4,6 +4,8 @@ const port = 8000;
 const userRoutes = require("./routes/user.routes");
 const fs = require("fs");
 
+app.use(express.json());
+
 app.use("/user", userRoutes);
 
 app.get("/", (req, res) => {
