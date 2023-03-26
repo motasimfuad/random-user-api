@@ -8,7 +8,7 @@ router.route("/all").get(userController.getAllUsers);
 
 router.route("/save").post(userController.saveNewUser);
 
-router.route("/update").patch(userController.updateUser);
+router.route("/update/:id").patch(userController.updateUser);
 
 router.route("/bulk-update").patch(userController.bulkUpdateUsers);
 

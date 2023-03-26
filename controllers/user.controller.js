@@ -70,7 +70,43 @@ function saveNewUser(req, res) {
 }
 
 function updateUser(req, res) {
-  res.send("user updated");
+  const { id } = req.params;
+  const body = req.body;
+  fs.readFile("./users.json", (err, data) => {
+    if (err) {
+      console.log(err);
+      res.status(400).send("Something went wrong");
+    } else {
+      const users = JSON.parse(data);
+      const userFound = users.some((user) => user.id === id);
+      if (!userFound) {
+        res.status(400).send("User not found");
+        return;
+      } else {
+        const user = users.find((user) => user.id === id);
+        const updatedUser = { ...user, ...body };
+        console.log(updatedUser);
+        const updatedUsers = users.map((oldUser) => {
+          if (oldUser.id === id) {
+            return updatedUser;
+          } else {
+            return oldUser;
+          }
+        });
+        fs.writeFile("./users.json", JSON.stringify(updatedUsers), (err) => {
+          if (err) {
+            console.log(err);
+            res.status(400).send("Something went wrong");
+          } else {
+            res.json({
+              status: "success",
+              data: updatedUser,
+            });
+          }
+        });
+      }
+    }
+  });
 }
 
 function bulkUpdateUsers(req, res) {
